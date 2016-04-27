@@ -3,6 +3,7 @@ package com.service.mvc.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -29,5 +30,10 @@ public class CustomerController {
 		customer.add(new Customer(2, "B", "2"));
 		customer.add(new Customer(3, "C", "1"));*/
         return customer;
+    }
+	
+	@RequestMapping(value = "/get/customer/", method = RequestMethod.POST)
+    public void addCustomer(@RequestBody Customer customer) {
+		customerService.insertCustomer(customer);
     }
 }

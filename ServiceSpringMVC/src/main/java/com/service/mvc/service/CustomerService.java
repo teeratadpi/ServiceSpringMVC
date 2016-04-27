@@ -8,4 +8,6 @@ import com.service.mvc.model.Customer;
 public interface CustomerService {
 
 	public List<Customer> findAll();
+	
+	public void insertCustomer(Customer customer);
 }
