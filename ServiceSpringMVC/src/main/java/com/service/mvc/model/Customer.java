@@ -13,7 +13,7 @@ public class Customer{
 	
 	private int id;
 	private String name;
-	private String age;
+	private int age;
 	
 	
 	public Customer() {
@@ -26,7 +26,7 @@ public class Customer{
 		this.name = name;
 	}
 
-	public Customer(int id, String name, String age) {
+	public Customer(int id, String name, int age) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -52,11 +52,11 @@ public class Customer{
 		this.name = name;
 	}
 	
-	@Column(name = "cusage", nullable = false, length = 1)
-	public String getAge() {
+	@Column(name = "cusage", nullable = false, length = 10)
+	public int getAge() {
 		return age;
 	}
-	public void setAge(String age) {
+	public void setAge(int age) {
 		this.age = age;
 	}
 		
